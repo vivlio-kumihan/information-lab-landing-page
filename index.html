@@ -1,231 +1,260 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/vendors/css-reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/vendors/css-reset.css">
-  <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/vendors/gsap.min.js" defer></script>
+    <script src="./scripts/libs/text-animation.js" defer></script>
+    <script src="./scripts/libs/scroll.js" defer></script>
+    <script src="./scripts/libs/modal.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+  </head>
 
-  <script src="./scripts/libs/mobile-menu.js" defer></script>
-  <script src="./scripts/libs/hero-slider.js" defer></script>
-  <script src="./scripts/vendors/gsap.min.js" defer></script>
-  <script src="./scripts/libs/text-animation.js" defer></script>
-  <script src="./scripts/libs/scroll.js" defer></script>
-  <script src="./scripts/main.js" defer></script>
-</head>
+  <body class="pace-done">
+    <div id="global-container">
+      <div id="container">
+        <div class="nav-trigger"></div>
+        <div class="header">
+          <a href="https://www.i.kyoto-u.ac.jp/" class="logo-wrapper" target="_blank">
+            <div class="logo">
+              <img
+                class="logo__img"
+                src="./images/logo-kyoto-univ.png"
+                alt=""
+              />
+            </div>
+            <div class="logo">
+              <img
+                class="logo__img"
+                src="./images/logo-informatics.png"
+                alt=""
+              />
+            </div>
+          </a>
+          <ul class="header__inner">
+            <li class="header__list">
+              <a href="https://www.i.kyoto-u.ac.jp/events/jyoho_8daigaku/20250316.html" target="_blank">
+                <div class="image-wrapper ragistration">
+                  <img src="./images/pict-ragistration.png" alt="" />
+                </div>
+                お申し込み
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="mailto:140soumu@mail2.adm.kyoto-u.ac.jp" target="_blank">
+                <div class="image-wrapper mail">
+                  <img src="./images/pict-mail.png" alt="" />
+                </div>
+                お問い合わせ
+              </a>
+            </li>
+            <li class="header__list">
+              <a href="#access">
+                <div class="image-wrapper location">
+                  <img src="./images/pict-location.png" alt="" />
+                </div>
+                地図
+              </a>
+            </li>
+          </ul>
+        </div>
 
-<body class="pace-done">
-  <div id="global-container">
-    <div id="container">
-      <div class="mobile-menu__cover"></div>
-      <div class="nav-trigger"></div>
-      <div class="header">
-        <div class="header-bg"></div>
-        <div class="header__inner appear up">
-          <div class="logo img-wrapper">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div id="content">
+          <div id="main-content">
+            <main>
+              <section class="main-visual">
+                <div class="lead__copy-pc">
+                  情報学って、理系や文系の多様なシーンに広がってる、<br />
+                  仕事も生活も夢の実現に向けてバランスの取りやすい<br />
+                  女性にもピッタリな分野だと知ってましたか?!
+                </div>
+                <div class="lead__era-location">
+                  <div class="era-wrapper">
+                    <img src="./images/era-era.png" alt="" />
+                    <img class="time" src="./images/era-time.png" alt="" />
+                  </div>
+                  <div class="lead__spec-item location for-pc">
+                    <div class="image-wrapper">
+                      <img src="./images/icon-location.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <span>京都大学国際科学イノベーション棟</span><br />
+                      <span class="add-pict">西館５階シンポジウムホール</span>
+                    </div>
+                  </div>
+                </div>                
+              </section>
+
+              <section class="lead">
+                <div class="lead__copy-sm">
+                  情報学って、理系や文系の多様なシーンに広がってる、<br />
+                  仕事も生活も夢の実現に向けてバランスの取りやすい<br />
+                  女性にもピッタリな分野だと知ってましたか?!
+                </div>
+                <div class="lead__era">
+                  <img src="./images/era-era.png" alt="" />
+                  <img src="./images/era-time.png" alt="" />
+                </div>
+                <div class="lead__spec">
+                  <div class="lead__spec-item location for-sm">
+                    <div class="image-wrapper">
+                      <img src="./images/icon-location.png" alt="" />
+                    </div>
+                    <div class="content">
+                      京都大学国際科学イノベーション棟<br />西館５階シンポジウムホール
+                    </div>
+                  </div>
+                  <div class="lead__spec-item capacity">
+                    <div class="image-wrapper">
+                      <img src="./images/icon-capacity.png" alt="" />
+                    </div>
+                    <div class="content">
+                      学生100名 <span class="font-12px">（抽選）</span
+                      ><br class="add-sm" /><span class="font-14px"></span>
+                      抽選受付&nbsp;:&nbsp;2／5（水）9:00～2／26（水）17:00
+                    </div>
+                  </div>
+                  <div class="lead__spec-item target">
+                    <div class="image-wrapper">
+                      <img src="./images/icon-target.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <div class="content__title">
+                        高校生､中学生とその保護者､教員
+                      </div>
+                      <div class="content__copy">
+                        保護者の方へ
+                        保護者の方はポスター展示にご参加頂くことはできませんが、進路について知りたいことがある、女子学生の情報学への進路を心配している等あれば、教員によるQ&Aコーナーにて、遠慮なく聞いてみてください。保護者の付き添いは最大１名まで可とします。保護者の方の申し込みは不要です。
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="information">
+                <div class="lead-visual"></div>
+
+                <div class="content part-one">
+                  <div class="image-wrapper">
+                    <img src="./images/catch-part1.png" alt="" />
+                  </div>
+                  <div class="content__copy">
+                    <span>第１部</span>
+                    国立大学法人８大学（北海道大学・東北大学・<br class="for-sm" />
+                    東京大学・東京科学大学・名古屋大学・<br />
+                    京都大学・大阪大学・九州大学）を繋いで、<br class="for-sm" />
+                    情報学の魅力について説明します。
+                  </div>
+                </div>
+
+                <div class="content part-two">
+                  <div class="image-wrapper">
+                    <img src="./images/catch-part2.png" alt="" />
+                  </div>
+                  <div class="content__copy">
+                    <span>第2部</span>
+                    ポスター展示やカジュアルな座談会を通じて、情報学で学べることや最新技術などをたっぷり見せます。<br
+                      class="for-sm"
+                    />
+                    さらに、学生（学部生・大学院生）がどのように大学で研究しているか、京都大学の色々を聴かせます。<br
+                      class="for-sm"
+                    />
+                    また、大学生活や進路で知りたいこと、女性教員や学生の経験談、なんでも遠慮なく聞いてみてください！
+                  </div>
+                </div>
+
+                <div class="btn-ragistration">
+                  <a href="https://www.i.kyoto-u.ac.jp/events/jyoho_8daigaku/20250316.html" target="_blank">
+                    <div class="image-wrapper">
+                      <img src="./images/btn-ragistration.png" alt="" />
+                    </div>
+                    <div class="content__copy">
+                      <span class="content-title">【お申し込み】</span>
+                      お申し込みはこちら!
+                    </div>
+                  </a>
+                </div>
+
+                <div class="content to-email">
+                  <div class="image-wrapper">
+                    <img src="./images/catch-email.png" alt="" />
+                  </div>
+                  <div class="content__copy">
+                    <span class="content-title">【お問い合わせ】</span
+                    >京都大学情報学研究科
+                    <div class="add-pict">
+                      「見せます、聴かせます、情報学」実施事務局
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="chapter__btn to-modal">
+                  <button href="" class="btn slide-bg" data-name="${ event.eventID }">写真を見る→</button>
+                </div> -->
+                <div id="access" class="content access modal-btn" value="access-map" data-name="access-map">
+                  <div class="image-wrapper">
+                    <img src="./images/catch-access.png" alt="" />
+                  </div>
+                  <div class="content__copy">
+                    <span class="content-title">【地図】</span>
+                    <div class="image-wrapper">
+                      <img src="./images/map.png" alt="" />
+                    </div>
+                    <div class="add-pict">交通アクセス</div>
+                  </div>
+                </div>
+              </section>
+            </main>
           </div>
-          <nav class="header__nav">
-            <ul>
-              <li class="header__list item"><a href="#">お申し込み</a></li>
-              <li class="header__list item"><a href="#">お問い合わせ</a></li>
-              <li class="header__list item"><a href="#">地図</a></li>
-            </ul>
-          </nav>
+        </div>
+
+        <div class="footer">
+        <!-- <div class="footer appear up"> -->
+          <a href="https://www.i.kyoto-u.ac.jp/" target="_blank">
+            <div class="logo-wrapper">
+              <div class="logo">
+                <img
+                  class="logo__img"
+                  src="./images/logo-kyoto-univ.png"
+                  alt=""
+                />
+              </div>
+              <div class="logo">
+                <img
+                  class="logo__img"
+                  src="./images/logo-informatics.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="footer__copyright item">
+              【主催】京都大学大学院情報学研究科
+            </div>
+          </a>
         </div>
       </div>
 
-      <div id="content">
-        <div id="main-content">
-          <main>
-            <section class="main-visual image-wrapper">
-              <img src="" alt="">
-            </section>
-            <section class="lead-copy"></section>
-            <section class="contents">
-              <div class="part1"></div>
-              <div class="part2"></div>
-              <div class="to-contact-form"></div>
-              <div class="to-"></div>
+      <div class="modal">
+        <button class="btn modal__toggle-btn" value="access-map">戻&ensp;る</button>
+        <div class="modal__inner access-map">
+          <div class="modal__window">
+            <div class="modal__image">
+              <img src="./images/trafic-access.png" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            </section>          
-          </main>
-        </div>
-      </div>
-      <div class="footer appear up">
-        <div class="logo item">
-          <img class="logo__img" src="./images/logo.svg" alt="">
-        </div>
-        <nav class="footer__nav">
-          <div class="footer__copyright item">【主催】京都大学大学院情報学研究科</div>
-        </nav>
-      </div>
     </div>
-
-    <!-- <nav class="mobile-menu">
-      <div class="logo">
-        <img class="logo__img" src="./images/logo.svg" alt="">
-        <span class="logo__stay">Stay</span>
-        <span class="logo__world">World</span>
-      </div>
-      <ul class="mobile-menu__main">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#">
-            <span class="main-title">Part1</span>
-            <span class="sub-title">第1部</span>
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#">
-            <span class="main-title">Part2</span>
-            <span class="sub-title">第2部</span>
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#">
-            <span class="main-title">to Contact Form</span>
-            <span class="sub-title">お申し込み</span>
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#">
-            <span class="main-title">to E-Mail</span>
-            <span class="sub-title">お問い合わせ</span>
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#">
-            <span class="main-title">Access</span>
-            <span class="sub-title">地図</span>
-          </a>
-        </li>
-      </ul>
-    </nav> -->
-  </div>
-</body>
-
+  </body>
 </html>
-
-
-<!-- <section class="travel">
-  <div class="travel__inner">
-    <div class="travel__img cover-slide">
-      <img class="img-zoom" src="images/image-travel.jpg" />
-    </div>
-    <div class="travel__texts appear left">
-      <div class="travel__texts-inner">
-        <div class="travel__title main-title item">
-          <span class="purple">Travel</span>
-          <span>the world</span>
-        </div>
-        <div class="travel__sub sub-title item">
-          世界中を旅しよう
-        </div>
-        <div class="travel__description item">
-          <p>世界１５０ヶ国で<br />利用できる民泊サービスです。</p>
-          <p>あなたの望む宿がきっと見つかります。</p>
-        </div>
-        <div class="travel__btn item">
-          <button class="btn filled">もっと詳しく</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="houses">
-  <div>
-    <h2 class="main-title animate-title">Find Your HouseFind Your HouseFind Your HouseFind Your HouseFind Your HouseFind Your HouseFind Your House</h2>
-    <p class="sub-title animate-title">お気に入りの宿泊先を見つけよう!</p>
-  </div>
-  <div class="houses__inner">
-    <div class="houses__item">
-      <div class="cover-slide hover-darken">
-        <div class="bg-img-zoom img-bg50"></div>
-      </div>
-      <p class="houses__title">House 1</p>
-    </div>
-    <div class="houses__item">
-      <div class="cover-slide hover-darken">
-        <div class="bg-img-zoom img-bg50 two"></div>
-      </div>
-      <p class="houses__title">House 2</p>
-    </div>
-    <div class="houses__item">
-      <div class="cover-slide hover-darken">
-        <div class="bg-img-zoom img-bg50 three"></div>
-      </div>
-      <p class="houses__title">House 3</p>
-    </div>
-    <div class="houses__item">
-      <div class="cover-slide hover-darken">
-        <div class="bg-img-zoom img-bg50 four"></div>
-      </div>
-      <p class="houses__title">House 4</p>
-    </div>
-    <div class="houses__item">
-      <div class="cover-slide hover-darken">
-        <div class="bg-img-zoom img-bg50 five"></div>
-      </div>
-      <p class="houses__title">House 5</p>
-    </div>
-    <div class="houses__item">
-      <div class="cover-slide hover-darken">
-        <div class="bg-img-zoom img-bg50 six"></div>
-      </div>
-      <p class="houses__title">House 6</p>
-    </div>
-    <div class="houses__btn appear up">
-      <button class="btn slide-bg item">もっと詳しく</button>
-    </div>
-  </div>
-</section>
-
-<section class="popular">
-  <div class="popular__header">
-    <h2 class="main-title animate-title">Popular Place</h2>
-    <p class="sub-title animate-title">
-      人気の観光地で宿泊先を見つけましょう!
-    </p>
-  </div>
-  <div class="popular__inner appear up">
-    <div class="popular__container">
-      <div class="popular__item item">
-        <div class="popular__img">
-          <img src="./images/image-p1.jpg" alt="">
-        </div>
-        <p class="popular__title">パリ</p>
-      </div>
-      <div class="popular__item item">
-        <div class="popular__img">
-          <img src="./images/image-p2.jpg" alt="">
-        </div>
-        <p class="popular__title">ニューヨーク</p>
-      </div>
-      <div class="popular__item item">
-        <div class="popular__img">
-          <img src="./images/image-p3.jpg" alt="">
-        </div>
-        <p class="popular__title">香港</p>
-      </div>
-      <div class="popular__item item">
-        <div class="popular__img">
-          <img src="./images/image-p4.jpg" alt="">
-        </div>
-        <p class="popular__title">大阪</p>
-      </div>
-      <div class="popular__btn appear up">
-        <button class="btn cover-3d item">
-          <span>一覧から探す</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>  -->

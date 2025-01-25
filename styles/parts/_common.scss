@@ -1,11 +1,12 @@
 @use "../globals" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  // ページのheaderにリンクを貼って、CSSでフォントファミリーを指定する。
-  // フォント・スタックで記述すること。
-  // 英語の書体なら『Kameron』にマッチ、日本語の書体は、2番目の『Noto Sans JP』にマッチする。
-  // 順に探していく仕様。
-  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  font-size: 93.375%;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 // !!!!! WEBフォントの指定で2年前から変わったところがあるよう。!!!!!
@@ -21,18 +22,6 @@ body {
     font-weight: 500;
   }
 }
-// }
-// & .kameron {
-//   font-family: "Kameron", serif;
-//   font-optical-sizing: auto;
-//   font-style: normal;
-//   &__md {
-//     font-weight: 400;
-//   }
-//   &__b {
-//     font-weight: 700;
-//   }
-// }
 
 // image
 img {
@@ -137,4 +126,89 @@ a {
   @extend .font-sm;
   @extend .mb-sm;
   color: $cSubTitle;
+}
+
+.font-12px {
+  font-size: 12px;
+}
+
+.font-14px {
+  font-size: 14px;
+}
+
+
+.modal {
+  @extend .content-width;
+  &__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0 40px;
+    background-color: rgba($color: $cBlack, $alpha: .9);
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: .5s;
+    opacity: 1;
+    z-index: 100;
+    @include mq(md) {
+      padding: 90px 0 60px;
+    }
+    @include mq(lg) {
+      padding: 100px 0;
+    }
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  &__window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: nowrap;    
+  }
+  &__image {
+    flex-shrink: 0;
+    width: 90%;
+    overflow: hidden;
+    @include mq(lg) {
+      width: 900px;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    margin: 0;
+    padding: 10px 15px;
+    color: $cWhite;
+    background-color: $cTheme;
+    border-radius: 5px;
+    transition: .5s;
+    transform: translateX(400%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 101;
+    @include mq(md) {
+      top: 20px;
+      right: 20px;
+    }
+    @include mq(lg) {
+      top: 20px;
+      right: 30px;
+    }
+    &.active {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }

@@ -5,6 +5,7 @@ class Main {
     const targets = document.querySelectorAll('.animate-title');
     this.tas = [...targets].map(node => new GsapTextAnimation(node));
     this._observers = [];
+    new Modal();
     this._init();
   }
 
@@ -27,7 +28,7 @@ class Main {
       new ScrollObserver('.cover-slide', this._slideImageCB, { once: true }),
       new ScrollObserver('.appear', this._appearAnimeCB, { once: true }),
       new ScrollObserver('.animate-title', this._textAnimeCB.bind(this), { once: false }),     
-      new ScrollObserver('#main-content', this._asideAnimeCB.bind(this), { once: false, rootMargin: "-300px 0px" }),     
+      // new ScrollObserver('#main-content', this._asideAnimeCB.bind(this), { once: false, rootMargin: "-300px 0px" }),     
     )
   }
   
@@ -72,15 +73,6 @@ class Main {
       this.tas.forEach(ta => { if (ta.DOM.el === el) ta.animate(); })     
     } else {
       el.classList.remove('inview');
-    }
-  };
-
-  // Aside Animation
-  _asideAnimeCB(el, isIntersecting) {
-    if (isIntersecting) {
-      this.asides.forEach(side => side.classList.add('inview'))
-    } else {
-      this.asides.forEach(side => side.classList.remove('inview'))
     }
   };
 }
